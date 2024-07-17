@@ -66,42 +66,45 @@ export const products = [
         img: London_city,
         name:'London city',
         category: 'city',
-        price:10,
+        price: 10,
+        Bestseller: true
     },
     {
         id:2,
         img: Food_with_wine,
         name:'Food with Wine',
         category: 'food',
-        price:70
+        price: 70,
     },
     {
         id:3,
         img: Fried_potatoe,
         name:'Fried Potatoe',
         category: 'food',
-        price:30
+        price:30,
+        Bestseller: true
     },
     {
         id:4,
         img: Citrus_slices,
         name:'Citrus Slices',
         category: 'food',
-        price:10
+        price:10,
     },
     {
         id:5,
         img: Landmark_image,
         name:'Landmark Bridge',
         category: 'landmark',
-        price:22
+        price:20,
+        Bestseller: true
     },
     {
         id:6,
         img: Amusement_park,
         name:'Amusement Park',
         category: 'landmark',
-        price:60
+        price:60,
     },
     {
         id:7,
@@ -115,7 +118,8 @@ export const products = [
         img: House_on_a_sea,
         name:'House on a Sea',
         category: 'landmark',
-        price:55
+        price:55,
+        Bestseller: true
     },
     {
         id:9,
@@ -136,7 +140,8 @@ export const products = [
         img: Sea,
         name:'The Sea',
         category: 'nature',
-        price:14
+        price:14,
+        Bestseller: true
     },
     {
         id:12,
@@ -157,7 +162,8 @@ export const products = [
         img: Woman_in_garden,
         name:'Woman in a Garden',
         category: 'nature',
-        price:20
+        price:20,
+        Bestseller: true
     },
     {
         id:15,
@@ -171,7 +177,8 @@ export const products = [
         img: Waterfall,    
         name:'Waterfall',
         category: 'nature',
-        price:55
+        price:55,
+        Bestseller: true
     },
     {
         id:17,
@@ -199,7 +206,8 @@ export const products = [
         img: Beautiful_lady,
         name:'Beautiful Lady',
         category: 'people',
-        price:90
+        price:90,
+        Bestseller: true
     },
     {
         id:21,
@@ -220,7 +228,8 @@ export const products = [
         img: Woman_in_a_tub,
         name:'Woman in a bathing tub',
         category: 'people',
-        price:60
+        price:60,
+        Bestseller: true
     },
     {
         id:24,
@@ -241,7 +250,8 @@ export const products = [
         img: Cute_rabbit,
         name:'A cute Rabbit',
         category: 'pet',
-        price:65
+        price:65,
+        Bestseller: true
     },
     {
         id:27,
@@ -262,7 +272,8 @@ export const products = [
         img: Sun_flower,
         name:'A sun hat and flower',
         category: 'premium',
-        price:200
+        price:200,
+        Bestseller: true
     },
     {
         id:30,
@@ -290,7 +301,8 @@ export const products = [
         img: Skilled_biker,
         name:'Skilled Biker',
         category: 'premium',
-        price:128
+        price:128,
+        Bestseller: true
     },
     {
         id:34,
@@ -311,7 +323,8 @@ export const products = [
         img: Yoga_girls,
         name:'Females doing yoga',
         category: 'people',
-        price:160
+        price:160,
+        Bestseller: true
     },
     {
         id:37,
@@ -339,7 +352,8 @@ export const products = [
         img: Train,
         name:'Train in motion',
         category: 'landmark',
-        price:200
+        price:200,
+        Bestseller: true
     },
     {
         id:41,
@@ -360,7 +374,8 @@ export const products = [
         img: Talented_artist,
         name: 'Talented Artist',
         category: 'premium',
-        price:23
+        price:23,
+        Bestseller: true
     },
     {
         id:44,
@@ -388,7 +403,8 @@ export const products = [
         img: Coffee_request,
         name:'Coffee request',
         category: 'premium',
-        price:54
+        price:54,
+        Bestseller: true
     },
     {
         id:48,
@@ -416,7 +432,8 @@ export const products = [
         img: Water_city,
         name:'City surrounded by ...',
         category: 'city',
-        price:18
+        price:18,
+        Bestseller: true
     },
     {
         id:52,
@@ -451,7 +468,8 @@ export const products = [
         img: Cake,
         name:'Velvet Cake',
         category: 'food',
-        price:212
+        price:212,
+        Bestseller: true
     },
     {
         id:57,
@@ -479,7 +497,8 @@ export const products = [
         img: Braised_rice,
         name:'Braised Rice',
         category: 'food',
-        price:23
+        price:23,
+        Bestseller: true
     },
 ];
 
@@ -487,3 +506,5 @@ export const getCategories = (products) => {
   const categories = products.map(product => product.category);
   return [...new Set(categories)];
 };
+
+export const categories = getCategories(products);

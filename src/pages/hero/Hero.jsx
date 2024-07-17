@@ -1,12 +1,13 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import Landmark_image from '../../images/Landmark_bridge.jpg';
 import Amusement_park from "../../images/Amusement_park.jpg";
 import House_on_a_sea from "../../images/House_on_a_sea.jpg";
 import City_buildings from "../../images/City_buildings.jpg";
 import ImageWithPreview from '../Image_preview/imageWithPreview';
+import { CartContext } from '../cart/Cartcontext';
 
 function Hero() {
-
+  const { addToCart } = useContext(CartContext);
   return (
     <div className='border-b-2 w-[90%] mx-auto py-8'>
       <div className='flex justify-between w-[90%] mx-auto pt-14 pb-8'>
@@ -32,17 +33,17 @@ function Hero() {
         {/* Section for the hoverable images */}
         <div className='basis-1/5 relative'>
           <ImageWithPreview
-          src={Amusement_park} alt='Amusement Park'
+          src={Amusement_park} alt='Amusement Park' addToCart={addToCart}
         />
         </div>
         <div className='basis-1/5 relative'>
           <ImageWithPreview
-          src={House_on_a_sea} alt='House on a sea'
+          src={House_on_a_sea} alt='House on a sea'  addToCart={addToCart}
         />
         </div>
         <div className='basis-1/5 relative'>
           <ImageWithPreview
-          src={City_buildings} alt='City Buildings'
+          src={City_buildings} alt='City Buildings' addToCart={addToCart}
         />
         </div>
       </div>

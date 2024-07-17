@@ -4,8 +4,10 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from '../dropdown/dropdown';
 import Sidebar from '../sidebar/Sidebar';
 import Product from '../product/Product';
+// import { PriceProvider } from '../sidebar/price/PriceContext';
 
 function Photography() {
+
   return (
     <div className='container w-[90%] mx-auto my-4 py-4'>
       <div className='flex justify-between py-4'>
@@ -17,9 +19,12 @@ function Photography() {
           <Dropdown /> 
         </div>
       </div>
-      <div className='border border-gray-200 flex justify-between gap-4 p-4'>
-        <Sidebar />
-        <Product />
+      <div className='border border-gray-200 flex justify-between gap-2 p-4'>
+        {/* <PriceProvider> */}
+          <Sidebar/>
+          <Product/>
+        {/* </PriceProvider> */}
+        
       </div>
     </div>
   )
