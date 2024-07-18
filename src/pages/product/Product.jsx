@@ -53,24 +53,24 @@ const Product = () => {
       <div className='flex snap-x snap-mandatory scroll-pl-6 overflow-x-scroll lg:overflow-hidden md:overflow-hidden md:grid md:grid-cols-3 gap-10'>
       {currentProducts.map((product) => ( 
         product.Bestseller ===true ? (
-          <div class="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white hover:shadow-lg hover:shadow-gray-600 border border-gray-200 relative scroll-ml-6 snap-start flex-shrink-0">
+          <div className="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white hover:shadow-lg hover:shadow-gray-600 border border-gray-200 relative scroll-ml-6 snap-start flex-shrink-0" key={product}>
           <ImageWithPreview className="h-48 w-full object-center object-contain" 
           src={product.img} alt={product.name} product={product} addToCart={addToCart} />
-          <div class="p-4">
-            <p class="mb-2 text-lg font-medium text-gray-700">{product.category}</p>
-            <h2 class="mb-2 text-lg font-medium text-gray-900">{product.name}</h2>
-            <p class="mb-2 text-base text-gray-500">${product.price}</p>
+          <div className="p-4">
+            <p className="mb-2 text-lg font-medium text-gray-700">{product.category}</p>
+            <h2 className="mb-2 text-lg font-medium text-gray-900">{product.name}</h2>
+            <p className="mb-2 text-base text-gray-500">${product.price}</p>
             <p className='bg-white text-gray-700 absolute px-4 py-2 left-0 top-0 mx-auto font-semibold'>Best Seller</p>
           </div>
         </div>
         ): (
-          <div class="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white duration-300 hover:shadow-lg hover:shadow-gray-600 border border-gray-200 scroll-ml-6 snap-start flex-shrink-0">
+          <div className="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white duration-300 hover:shadow-lg hover:shadow-gray-600 border border-gray-200 scroll-ml-6 snap-start flex-shrink-0">
           <ImageWithPreview className="h-48 w-screen object-cover object-center" 
           src={product.img} alt={product.name} product={product} addToCart={addToCart}/>
-          <div class="p-4">
-            <p class="mb-2 text-lg font-medium text-gray-700">{product.category}</p>
-            <h2 class="mb-2 text-lg font-medium text-gray-900">{product.name}</h2>
-            <p class="mb-2 text-base text-gray-500">${product.price}</p>
+          <div className="p-4">
+            <p className="mb-2 text-lg font-medium text-gray-700">{product.category}</p>
+            <h2 className="mb-2 text-lg font-medium text-gray-900">{product.name}</h2>
+            <p className="mb-2 text-base text-gray-500">${product.price}</p>
           </div>
         </div>
         )
