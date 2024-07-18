@@ -12,7 +12,7 @@ function Navbar() {
 
  const [open, setOpen] = useState(false);
   return (
-    <div className='w-full shadow-md z-30 sticky top-0 backdrop-blur-lg'>
+    <div className='w-[100%] shadow-md z-30 sticky top-0 backdrop-blur-lg'>
      <div className='flex h-20 items-center justify-between bg-white mx-auto container pt-4 px-8'>
          <h2 className='text-black font-bold text-3xl'>BEJAMAS_</h2>
          <Badge badgeContent={cart.length} color='primary' className='text-gray-400'>

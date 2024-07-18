@@ -10,18 +10,18 @@ function Hero() {
   const { addToCart } = useContext(CartContext);
   return (
     <div className='border-b-2 w-[90%] mx-auto py-8'>
-      <div className='flex justify-between w-[90%] mx-auto pt-14 pb-8'>
-        <h2 className='text-3xl font-bold'>Landmark Bridge Image</h2>
-        <button className='p-2 w-44 bg-gray-800 hover:bg-black text-white '>ADD TO CART</button>
+      <div className='flex justify-between w-[90%] mx-auto pt-8 pb-4 lg:pt-14 lg:pb-8'>
+        <h2 className='text-lg font-medium lg:font-bold lg:text-3xl '>Landmark Bridge Image</h2>
+        <button className='p-2 w-32 text-sm bg-gray-800 hover:bg-black text-white lg:text-lg lg:w-44 '>ADD TO CART</button>
       </div>
       <div className='w-[90%] mx-auto relative py-4 justify-items-center'>
-          <img src={Landmark_image} alt='Landmark_image' className='h-[80%] w-full'/>
-         <p className='bg-white text-black absolute p-4 left-0 bottom-0 mx-auto font-bold h-20'>Photo of the day</p>     
+          <img src={Landmark_image} alt='Landmark_image' className='h-[80%] w-full motion-safe:animate-pulse'/>
+         <p className='bg-white text-black absolute p-2 left-0 bottom-0 mx-auto font-medium h-10 lg:h-20 lg:p-4 lg:font-bold'>Photo of the day</p>     
       </div>
 
-      <div className='flex justify-between w-[90%] mx-auto'>
-        <p className='text-black text-xl font-semibold'>About the Landmark Bridge Image</p>
-        <p className='text-black text-xl font-semibold'>People also buy</p>
+      <div className='flex justify-between w-[90%] mx-auto gap-4'>
+        <p className='text-black text-sm font-normal lg:text-xl lg:font-semibold'>About the Landmark Bridge Image</p>
+        <p className='text-black text-sm font-normal lg:text-xl lg:font-semibold'>People also buy</p>
       </div>
 
       <div className='flex flex-col lg:flex-row w-[90%] mx-auto gap-3 pt-6'>

@@ -13,7 +13,7 @@ const Category = () => {
   return (
     <div>
         <h2 className='text-2xl text-black font-semibold py-6'>Category</h2>
-       <section className='block gap-2 text-base font-light'>
+       <section className='flex flex-wrap lg:block gap-2 text-base font-light'>
        {categories.map((category) => (
 
         <div className="flex items-center mr-4 mb-4 gap-4" key={category}>

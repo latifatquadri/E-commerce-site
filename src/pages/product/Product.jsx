@@ -50,10 +50,10 @@ const Product = () => {
 
   return (
     <div className='border border-gray-200 p-4 basis-4/5 mb-4'>   
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
+      <div className='flex snap-x snap-mandatory scroll-pl-6 overflow-x-scroll lg:overflow-hidden md:overflow-hidden md:grid md:grid-cols-3 gap-10'>
       {currentProducts.map((product) => ( 
         product.Bestseller ===true ? (
-          <div class="w-full max-w-full mx-auto mt-11 overflow-hidden bg-white hover:shadow-lg hover:shadow-gray-600 border border-gray-200 relative">
+          <div class="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white hover:shadow-lg hover:shadow-gray-600 border border-gray-200 relative scroll-ml-6 snap-start flex-shrink-0">
           <ImageWithPreview className="h-48 w-full object-center object-contain" 
           src={product.img} alt={product.name} product={product} addToCart={addToCart} />
           <div class="p-4">
@@ -64,7 +64,7 @@ const Product = () => {
           </div>
         </div>
         ): (
-          <div class="w-full max-w-full mx-auto mt-11 overflow-hidden bg-white duration-300 hover:shadow-lg hover:shadow-gray-600 border border-gray-200">
+          <div class="w-full max-w-full mx-auto mt-11 overflow-visible lg:overflow-hidden md:overflow-hidden bg-white duration-300 hover:shadow-lg hover:shadow-gray-600 border border-gray-200 scroll-ml-6 snap-start flex-shrink-0">
           <ImageWithPreview className="h-48 w-screen object-cover object-center" 
           src={product.img} alt={product.name} product={product} addToCart={addToCart}/>
           <div class="p-4">
@@ -79,8 +79,8 @@ const Product = () => {
       </div>
 
       {/* Pagination controls */}
-      <div className="flex justify-center mt-4 pt-6 pb-10">
-        <FontAwesomeIcon icon={faChevronLeft}  onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className='mx-1 px-3 py-2 border border-gray-300 text-gray-500 hover:border-blue-400'/>
+      <div className="block lg:flex justify-center mt-4 pt-6 pb-10 ">
+        <FontAwesomeIcon icon={faChevronLeft}  onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} className='mx-1 px-3 py-2 border border-gray-300 text-gray-500 hover:border-blue-400 sm:mt-1'/>
         {Array.from({ length: totalPages }, (_, index) => (
         <button
           key={index}

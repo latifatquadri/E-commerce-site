@@ -10,8 +10,8 @@ function Photography() {
 
   return (
     <div className='container w-[90%] mx-auto my-4 py-4'>
-      <div className='flex justify-between py-4'>
-        <h2 className='text-black text-2xl font-semibold'>Photography /<span className='text-gray-600 text-2xl font-semibold'>Premium Photos</span></h2>
+      <div className='flex justify-between py-4 w-[100%] mx-auto'>
+        <h2 className='text-black text-xl font-semibold lg:text-2xl'>Photography/ <span className='text-gray-600 text-xl font-semibold lg:2xl'>Premium Photos</span></h2>
         <div className='flex gap-2'>
           <FontAwesomeIcon icon={faArrowUp} />
           <FontAwesomeIcon icon={faArrowDown} />
@@ -19,11 +19,9 @@ function Photography() {
           <Dropdown /> 
         </div>
       </div>
-      <div className='border border-gray-200 flex justify-between gap-2 p-4'>
-        {/* <PriceProvider> */}
+      <div className='border border-gray-200 block p-4 lg:flex justify-between gap-2'>
           <Sidebar/>
           <Product/>
-        {/* </PriceProvider> */}
         
       </div>
     </div>

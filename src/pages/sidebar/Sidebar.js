@@ -4,7 +4,7 @@ import Price from './price/Price';
 
 function Sidebar() {
   return (
-    <div className='basis-1/5'>
+    <div className='lg:basis-1/5'>
         <Category />
         <Price/>
     </div>

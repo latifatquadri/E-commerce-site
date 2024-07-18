@@ -12,7 +12,7 @@ function Price() {
    return (
     <div>
       <h2 className='text-2xl text-black font-semibold py-4'>Price Range</h2>
-         <div className="text-base font-light">
+         <div className="flex flex-wrap lg:block text-base font-light">
             <div className="flex items-center mr-2 mb-4 gap-4">
                <input id='0-19' type="checkbox" value='0-19' className="w-4 h-4 inline-block mr-1 border border-gray-500" checked={selectedPriceRanges.includes("0-19")} onChange={handlePriceChange}/>
                <label htmlFor='0-19' className="flex items-center cursor-pointer">
